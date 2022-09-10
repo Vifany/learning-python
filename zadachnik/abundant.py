@@ -5,11 +5,12 @@ import math
 
 def divisors(x):
     large_divisors = []
-    for d in range(2, int(math.sqrt(x)+1)):
+    for d in range(1, int(math.sqrt(x)+1)):
         if x%d == 0:
             yield d
             if d*d !=x: large_divisors.append(x/d)
-    for div in large_divisors: yield div
+    for div in large_divisors: 
+        if div < x: yield div
     
 def abundance(n):
     ab = sum(divisors(n)) - n
