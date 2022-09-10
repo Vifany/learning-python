@@ -4,6 +4,11 @@
 import math
 
 def divisors(x):
+    '''
+    Выводит все положительные целочисленные делители числа
+    '''
+    if x < 0: raise ValueError('Input must be positive')
+    if not isinstance(x, int): raise TypeError('Input must be integer')
     if x==0: yield 0
     else: 
         large_divisors = []

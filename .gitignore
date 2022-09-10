@@ -1,3 +1,4 @@
 .vscode/
 *.code-workspace
 .vscode/launch.json
+zadachnik/__pycache__/abundant.cpython-310.pyc
