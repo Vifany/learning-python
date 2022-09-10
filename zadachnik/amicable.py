@@ -19,8 +19,11 @@ def search_amicable(tar):
 
 def main():
     u"""Основная функция"""
+    clearing_set = set()
     for i, item in search_amicable(100000):
-        print(f'{i} amicable to {item}')
+        if i not in clearing_set:
+            print(f'{i} amicable to {item}')
+            clearing_set.add(item)
 
 
 if __name__ == '__main__':
