@@ -24,9 +24,8 @@ def factorize(tar):
 def main():
     """Основная функция"""
     tar = int(input('Введите целевое число: '))
-    print(f'Число {tar} факторизуется как: ', end='')
     factorizer = factorize(tar)
-    print(f'{next(factorizer)} ', end ='')
+    print(f'Число {tar} факторизуется как: {next(factorizer)} ', end='')
     for item in factorizer:
         print(f'* {item} ', end ='')
 
