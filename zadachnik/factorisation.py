@@ -5,7 +5,6 @@ import copy
 import sympy
 
 
-
 def factorize(tar):
     """Факторизует целое число"""
     num = copy.deepcopy(tar)
@@ -20,7 +19,6 @@ def factorize(tar):
         else: continue
         break
 
-
 def main():
     """Основная функция"""
     tar = int(input('Введите целевое число: '))
@@ -28,7 +26,6 @@ def main():
     print(f'Число {tar} факторизуется как: {next(factorizer)} ', end='')
     for item in factorizer:
         print(f'* {item} ', end ='')
-
 
 if __name__ == '__main__':
     main()
