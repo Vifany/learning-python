@@ -95,7 +95,13 @@ def deepest(start: int, tar: int):
             print('')
         print(item, end ='')
 
-sta = time.perf_counter()
-deepest(0, 100000000)
-end = (time.perf_counter() - sta)
-print(f'Потрачено {end}s')
+def main():
+    """Штат Мэйн"""
+    sta = time.perf_counter()
+    deepest(0, 100000000)
+    end = (time.perf_counter() - sta)
+    print(f'Потрачено {end}s')
+
+if __name__ == '__main__':
+    main()
+    
