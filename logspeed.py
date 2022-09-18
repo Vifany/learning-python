@@ -3,10 +3,12 @@
 итерации и логарифм
  """
 
+import random
 import math
 import time
 import functools
 from numpy import mean
+
 
 def timer(func):
     """Выводит производительность"""
@@ -33,22 +35,19 @@ def logarithmic(tar):
     x=int(math.log(tar,2))
     return x
 
-
-
-
 def main():
     """Штат Мэйн()"""
     arlog = []
     ariter = []
-    for i in range(2,1000000):
-        val, time = logarithmic(i)
+    for _ in range(1000000):
+        tar = random.randrange(2, 1000000000)
+        val, time = logarithmic(tar)
         arlog.append(time)
-        val, time = iterative(i)
+        val, time = iterative(tar)
         ariter.append(time)
-
-    mlolg = mean(arlog)
+    mlog = mean(arlog)
     miter = mean(ariter)
-    print(f'Среднее время логарифмически: {mlolg:.2f}нс, среднее время итеративно {miter:.2f}нс')
+    print(f'Среднее время логарифмически: {mlog:.2f}нс, среднее время итеративно {miter:.2f}нс')
 
 if __name__ == '__main__':
     main()
