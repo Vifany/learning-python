@@ -1,8 +1,8 @@
 import itertools
-
+import string
 def decompose_int(val):
-    '''Decomposes int into tuple with count of used digits'''
-    return tuple([str(val).count(str(i)) for i in range(10)])
+    '''Decomposes int into list with count of used digits'''
+    return [str(val).count(i) for i in string.digits]
 
 def searchlist(amount, power):
     '''
